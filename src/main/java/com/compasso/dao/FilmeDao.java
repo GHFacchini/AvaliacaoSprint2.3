@@ -21,11 +21,12 @@ public class FilmeDao {
         List<Filme> resultado = null;
         try {
             String jpql = "SELECT f FROM Filme f ";
-            resultado = em.createQuery(jpql, Filme.class).setMaxResults(q).setFirstResult(((p-1) * q)).getResultList();
+            resultado = em.createQuery(jpql, Filme.class).setMaxResults(q).
+                    setFirstResult(((p - 1) * q)).getResultList();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-            return resultado;
+        return resultado;
 
     }
 }

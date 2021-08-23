@@ -71,11 +71,11 @@ public class Main {
     private static void ordenar(int q, int p, EntityManager em, FilmeDao dao) {
         em.getTransaction().begin();
         List<Filme> resultado = dao.buscarN(q, p);
-        if(resultado != null) {
+        if (resultado != null) {
             for (Filme x : resultado) {
                 System.out.println(x);
             }
-        }else{
+        } else {
             System.out.println("Registro não encontrado");
         }
     }
